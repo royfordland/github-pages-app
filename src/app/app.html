@@ -1,0 +1,27 @@
+<div class="app-shell">
+	<div class="card">
+		<h1>{{ title }}</h1>
+		<p>Query the in-memory SQLite test database for a row by id.</p>
+		<p>The database currently contains {{ currentCount }} rows.</p>
+
+		<div class="input-row">
+			<label>
+				Id
+				<input type="number" [(ngModel)]="id" min="1" />
+			</label>
+			<button (click)="loadText()" [disabled]="loading">
+				{{ loading ? 'Loading...' : 'Load text' }}
+			</button>
+		</div>
+
+		<div *ngIf="result" class="result-box">
+			<strong>Query Result</strong>
+			<div>{{ result }}</div>
+		</div>
+
+		<div *ngIf="error" class="result-box error">
+			<strong>Error</strong>
+			<div>{{ error }}</div>
+		</div>
+	</div>
+</div>
