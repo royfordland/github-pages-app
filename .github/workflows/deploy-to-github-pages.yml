@@ -28,7 +28,7 @@ jobs:
               run: npm ci
 
             - name: Build production bundle
-              run: npm run build -- --configuration production
+              run: npm run build -- --configuration production --base-href /github-pages-app/
 
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v4
