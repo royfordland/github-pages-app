@@ -37,3 +37,6 @@ jobs:
               uses: actions/upload-pages-artifact@v4
               with:
                   path: dist/github-pages-app/browser
+
+            - name: Deploy Pages
+              uses: actions/deploy-pages@v4
