@@ -27,10 +27,8 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
-            # - name: Build production bundle
-            #   run: npm run build -- --configuration production
-            - name: Build bundle
-              run: npm run build
+            - name: Build production bundle
+              run: npm run build -- --configuration production
 
             - name: Configure GitHub Pages
               uses: actions/configure-pages@v4
@@ -38,7 +36,7 @@ jobs:
             - name: Upload artifact for GitHub Pages
               uses: actions/upload-pages-artifact@v4
               with:
-                  path: dist/github-pages-app/browser
+                  path: dist/github-pages-app/
 
             - name: Deploy Pages
               uses: actions/deploy-pages@v4
