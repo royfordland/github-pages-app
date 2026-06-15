@@ -20,7 +20,7 @@ jobs:
             - name: Checkout database repository
               uses: actions/checkout@v4
               with:
-                  repository: github-pages-app-db
+                  repository: royfordland/github-pages-app-db
                   path: github-pages-app-db
 
             - name: Setup Node.js
