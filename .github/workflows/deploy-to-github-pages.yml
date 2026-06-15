@@ -17,8 +17,8 @@ jobs:
             - name: Checkout repository
               id: idmain
               uses: actions/checkout@v4
-            #   with:
-            #       path: github-pages-app
+              with:
+                  path: github-pages-app
 
             - name: Checkout database repository
               id: iddb
@@ -26,6 +26,14 @@ jobs:
               with:
                   repository: royfordland/github-pages-app-db
                   path: github-pages-app-db
+
+            - name: Verify paths and list files
+              run: |
+                  echo "Main repo files:"
+                  ls github-pages-app
+
+                  echo "Database repo files:"
+                  ls github-pages-app-db
 
             # temp: print the paths
             - name: TEMP Log Repository Paths
