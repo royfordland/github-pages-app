@@ -1,8 +1,6 @@
 # github-pages-app
 Test project for hosting a new Angular app in GitHub pages along with using a SQLite database.
 
-TEMP; remove this, this is only here to see if this gets deployed somehow.
-
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.14.
 
 ## Development server
