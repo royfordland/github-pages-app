@@ -1,6 +1,8 @@
 # github-pages-app
 Test project for hosting a new Angular app in GitHub pages along with using a SQLite database.
 
+GitHub Pages: https://royfordland.github.io/github-pages-app/
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.14.
 
 ## Development server
