@@ -15,21 +15,21 @@ jobs:
 
         steps:
             - name: Checkout repository
-              id: checkout-main
+              id: idmain
               uses: actions/checkout@v4
 
             - name: Checkout database repository
-              id: checkout-db
+              id: iddb
               uses: actions/checkout@v4
               with:
                   repository: royfordland/github-pages-app-db
                   path: github-pages-app-db
 
             # temp: print the paths
-            - name: Log Repository Paths
+            - name: TEMP Log Repository Paths
               run: |
-                  echo "main repo absolute path: ${{ steps.checkout-main.outputs.path }}"
-                  echo "database repo absolute path: ${{ steps.checkout-db.outputs.path }}"
+                  echo "main repo absolute path: ${{ steps.idmain.outputs.path }}"
+                  echo "database repo absolute path: ${{ steps.iddb.outputs.path }}"
 
             - name: Setup Node.js
               uses: actions/setup-node@v4
