@@ -27,14 +27,6 @@ jobs:
                   repository: royfordland/github-pages-app-db
                   path: github-pages-app-db
 
-            - name: Verify paths and list files
-              run: |
-                  echo "Main repo files:"
-                  ls github-pages-app
-
-                  echo "Database repo files:"
-                  ls github-pages-app-db
-
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
