@@ -47,6 +47,7 @@ jobs:
                   node-version: 20
                   cache: 'npm'
                   cache-dependency-path: package-lock.json
+                  path: github-pages-app
 
             - name: Install dependencies
               run: npm ci
