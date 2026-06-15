@@ -17,8 +17,8 @@ jobs:
             - name: Checkout repository
               id: idmain
               uses: actions/checkout@v4
-              with:
-                  path: github-pages-app
+            #   with:
+            #       path: github-pages-app
 
             - name: Checkout database repository
               id: iddb
