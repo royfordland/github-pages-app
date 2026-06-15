@@ -11,16 +11,14 @@ export class SqliteService {
 
 	private async init(): Promise<Database> {
 		let db: any;
-
 		const baseHref = document.baseURI;
-		console.log('Base URI:', baseHref);
 
 		const SQL = await initSqlJs({
-			locateFile: (file) => `/assets/sql.js/${file}`,
+			locateFile: (file) => `${baseHref}assets/sql.js/${file}`,
 		});
 
 		// fetch the existing SQLite database file from the assets folder
-		const response = await fetch('/assets/database/testdb.sqlite');
+		const response = await fetch(`${baseHref}assets/database/testdb.sqlite`);
 		const buf = await response.arrayBuffer();
 
 		// configure sql.js to use this specific database data
