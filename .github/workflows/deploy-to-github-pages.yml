@@ -39,8 +39,7 @@ jobs:
               working-directory: ./github-pages-app
 
             - name: Run tests
-              run: npm test -- --watch=false --browsers=ChromeHeadlessNoSandbox
-              working-directory: ./github-pages-app
+              run: npm run test
 
             - name: Build production bundle
               run: npm run build -- --configuration production --base-href /github-pages-app/
